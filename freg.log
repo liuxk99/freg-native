@@ -1,0 +1,24 @@
+external/freg/freg.c:21:5: error: implicit declaration of function 'read' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+    read(fd, &val, sizeof(val));
+    ^
+external/freg/freg.c:21:5: note: did you mean 'fread'?
+bionic/libc/include/stdio.h:344:8: note: 'fread' declared here
+size_t fread(void *__restrict const __pass_object_size0 buf, size_t size,
+       ^
+external/freg/freg.c:26:9: error: implicit declaration of function 'write' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+        write(fd, &val, sizeof(val));
+        ^
+external/freg/freg.c:26:9: note: did you mean 'fwrite'?
+bionic/libc/include/stdio.h:369:8: note: 'fwrite' declared here
+size_t fwrite(const void * __restrict const __pass_object_size0 buf,
+       ^
+external/freg/freg.c:33:5: error: implicit declaration of function 'close' is invalid in C99 [-Werror,-Wimplicit-function-declaration]
+    close(fd);
+    ^
+external/freg/freg.c:8:14: warning: unused parameter 'argc' [-Wunused-parameter]
+int main(int argc, char** argv)
+             ^
+external/freg/freg.c:8:27: warning: unused parameter 'argv' [-Wunused-parameter]
+int main(int argc, char** argv)
+                          ^
+2 warnings and 3 errors generated.
